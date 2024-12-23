@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    margin-bottom: 10px;
+}
+
+.input-section input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #b0e0e6;
+    color: #4a4a4a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #a0d0d6;
+}
+.progress-section{
+    margin-top: 20px;
+    display:none;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+}
+
+.progress-bar::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color: #40e0d0;
+  animation: progress-animation 2s linear infinite;
+}
+@keyframes progress-animation {
+  0% {width: 0;}
+  100% {width: 100%;}
+}
+
+.progress-label{
+  margin-bottom: 10px;
+}
+
+.report-content {
+    text-align: left;
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
+
+.plots-container {
+    display: flex;
+    flex-direction: row; /* Change to row */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.plot-container {
+    padding: 10px;
+    margin: 10px;
+    width: calc(50% - 20px); /* each plot takes half the width, minus the margin */
+    box-sizing: border-box;
+}
+.plot-container canvas {
+    max-width: 100%;
+    height: auto;
+}
