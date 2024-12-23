@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Biblioteca de Vídeos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="report_title">Analisador de Biblioteca de Vídeos</h1>
+        
+        <div class="input-section">
+            <label for="report_name">Nome do Relatório:</label>
+             <input type="text" id="report_name" placeholder="Nome do relatório">
+            <label for="video_dir">Pasta raiz dos arquivos json:</label>
+            <input type="text" id="video_dir" placeholder="Caminho da pasta raiz">
+            <button id="generate_button">Gerar Relatório</button>
+        </div>
+
+        <div class="progress-section" style="display: none;">
+            <div class="progress-bar"></div>
+            <p class="progress-label">Gerando relatório...</p>
+             <div class="report-content">
+                 <pre id="report-text"></pre>
+             </div>
+              <div class="plots-container"></div>
+              <button id="back_button" style="display: none;">Voltar</button>
+        </div>
+        
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
