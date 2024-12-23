@@ -1,5 +1,5 @@
 
-# Video Report Generator
+# Video Report
 
 Este projeto tem como objetivo analisar e gerar relatórios informativos sobre dados de vídeos em um diretório. Ele analisa os metadados de vídeos extraídos de arquivos JSON e exibe informações como tamanho total, duração, resoluções, formatos, taxas de quadros (FPS) e distribuições gráficas dessas informações.
 
